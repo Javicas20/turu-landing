@@ -3,161 +3,237 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TURU | Gestiona turnos, disponibilidad y costes</title>
-  <meta name="description" content="TURU ayuda a negocios de hosteleria y ocio a organizar turnos, disponibilidad, jornadas y costes reales desde una sola herramienta.">
+  <title>Turito | Turnos, disponibilidad y costes bajo control</title>
+  <meta name="description" content="Turito centraliza los turnos, la disponibilidad de tu equipo y los costes del negocio en una herramienta clara y sencilla.">
+  <meta name="theme-color" content="#0877f9">
   <link rel="icon" href="assets/turito-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Inicio TURU">
-      <img src="assets/turito-logo.png" alt="" width="44" height="44">
-      <span>TURU</span>
-    </a>
-    <nav class="nav-links" aria-label="Principal">
-      <a href="#producto">Producto</a>
-      <a href="#acceso">Acceso</a>
-      <a href="#faq">FAQ</a>
-      <a href="privacy.html">Privacidad</a>
-      <a href="legal.html">Legal</a>
-    </nav>
-    <a class="header-cta" href="#acceso">Iniciar sesion</a>
+  <header class="site-header" id="inicio">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio de Turito">
+        <img src="assets/turito-logo.png" alt="" width="48" height="48">
+        <span>Turito</span>
+      </a>
+
+      <nav class="nav-links" id="mainNav" aria-label="Navegación principal">
+        <a href="#funciones">Funciones</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#precios">Precios</a>
+        <a href="faq.html">FAQ</a>
+        <a href="mailto:hola@turito.es">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="text-button" type="button" data-login-open>Iniciar sesión</button>
+        <button class="button primary compact" type="button" data-login-open>Empezar ahora</button>
+        <button class="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">www.turito.es</p>
-        <h1>Turnos, disponibilidad y costes bajo control.</h1>
-        <p class="hero-text">Organiza tu plantilla, publica cuadrantes, compara horas previstas con jornadas reales y controla salarios sin hojas eternas.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#acceso">Entrar a TURU</a>
-          <a class="button secondary" href="mailto:hola@turito.es?subject=Demo%20TURU">Solicitar demo</a>
-        </div>
-      </div>
-      <div class="product-panel" aria-label="Vista previa del producto">
-        <div class="panel-top">
-          <span>Septiembre 2026</span>
-          <strong>Resumen</strong>
-        </div>
-        <div class="metric-grid">
-          <article><span>Horas</span><strong>667.7 h</strong></article>
-          <article><span>Previstas</span><strong>934.0 h</strong></article>
-          <article><span>Coste</span><strong>7.515,18 €</strong></article>
-          <article><span>Equipo</span><strong>21</strong></article>
-        </div>
-        <div class="schedule-card">
-          <span class="status-dot"></span>
-          <div>
-            <strong>Viernes 20</strong>
-            <p>Barra principal · 20:30 - 04:30</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Organiza. Coordina. Controla.</p>
+          <h1 id="hero-title">Turnos, disponibilidad y costes. <span>Todo bajo control.</span></h1>
+          <p class="hero-text">Gestiona la operativa de tu equipo desde un único lugar, de forma clara y sencilla.</p>
+          <div class="hero-actions">
+            <button class="button primary" type="button" data-login-open>
+              Empezar con Turito
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6M4 12h11"/></svg>
+            </button>
+            <button class="button secondary" type="button" data-login-open>Iniciar sesión</button>
+          </div>
+          <div class="store-links" aria-label="Aplicaciones móviles">
+            <a class="store-badge" href="mailto:hola@turito.es?subject=Quiero%20Turito%20para%20Android" aria-label="Solicitar Turito para Android">
+              <svg viewBox="0 0 28 32" aria-hidden="true"><path fill="#00d5ff" d="M1 2.2 16.7 16 1 29.8c-.6-.5-1-1.3-1-2.2V4.4c0-.9.4-1.7 1-2.2Z"/><path fill="#00ef8b" d="m20.7 12.5-4 3.5L1 2.2C1.7 1.7 2.6 1.8 3.4 2l17.3 10.5Z"/><path fill="#ffd833" d="m20.7 19.5-17.3 10.4c-.8.5-1.7.5-2.4-.1L16.7 16l4 3.5Z"/><path fill="#ff4555" d="M26.2 15.7c1 .6 1 1.9 0 2.5l-5.5 3.3-4-3.5 4-3.5 5.5 1.2Z"/></svg>
+              <span><small>Descargar en</small><strong>Google Play</strong></span>
+            </a>
+            <a class="store-badge" href="mailto:hola@turito.es?subject=Quiero%20Turito%20para%20iPhone" aria-label="Solicitar Turito para iPhone">
+              <svg viewBox="0 0 26 32" aria-hidden="true"><path fill="currentColor" d="M21.7 17c0-4 3.3-5.9 3.4-6-1.8-2.7-4.7-3-5.7-3-2.4-.3-4.7 1.4-5.9 1.4-1.2 0-3-1.4-5-1.3A7.4 7.4 0 0 0 2.2 12c-2.7 4.7-.7 11.7 1.9 15.5 1.3 1.9 2.8 3.9 4.8 3.8 1.9-.1 2.7-1.3 5-1.3 2.4 0 3 1.3 5.1 1.2 2.1 0 3.5-1.9 4.8-3.8 1.5-2.2 2.1-4.4 2.2-4.5-.1 0-4.3-1.7-4.3-5.9ZM17.8 5.5A6.9 6.9 0 0 0 19.4.4a7 7 0 0 0-4.7 2.4 6.5 6.5 0 0 0-1.7 5c1.8.1 3.6-.8 4.8-2.3Z"/></svg>
+              <span><small>Descargar en</small><strong>App Store</strong></span>
+            </a>
           </div>
         </div>
+
+        <div class="phone-stage" aria-label="Capturas de la aplicación móvil Turito">
+          <div class="phone-glow"></div>
+          <img class="phone phone-back" src="assets/turito-home.png" alt="Pantalla de inicio de Turito con el resumen del mes" width="642" height="1362">
+          <img class="phone phone-front" src="assets/turito-calendar.png" alt="Calendario de turnos y disponibilidad en Turito" width="674" height="1362">
+        </div>
       </div>
     </section>
 
-    <section id="producto" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Producto</p>
-        <h2>Una operativa clara para encargados y trabajadores.</h2>
+    <section class="section features" id="funciones" aria-labelledby="features-title">
+      <div class="section-heading centered">
+        <p class="eyebrow">Funcionalidades</p>
+        <h2 id="features-title">Todo lo que necesitas, en un solo lugar</h2>
+        <p>Turito simplifica la gestión de turnos, disponibilidad y costes para que puedas centrarte en lo que realmente importa.</p>
       </div>
+
       <div class="feature-grid">
         <article class="feature-card">
-          <span class="feature-icon">01</span>
-          <h3>Disponibilidad</h3>
-          <p>Los trabajadores indican que dias pueden trabajar, todo el dia, por horas o si no pueden.</p>
+          <span class="icon-bubble blue">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 2v3M18 2v3M3.5 9h17M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M8 13h3v3H8zM14 13h2M8 19h2M14 19h2"/></svg>
+          </span>
+          <div>
+            <h3>Turnos</h3>
+            <p>Planifica y organiza los turnos de forma clara para que cada persona sepa cuándo trabaja y qué tiene asignado.</p>
+          </div>
         </article>
         <article class="feature-card">
-          <span class="feature-icon">02</span>
-          <h3>Cuadrantes</h3>
-          <p>El encargado genera turnos por dia, zona, puesto y horario, y los publica al equipo.</p>
+          <span class="icon-bubble green">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <div>
+            <h3>Disponibilidad</h3>
+            <p>Consulta la disponibilidad de tu equipo y organiza la planificación teniendo en cuenta las necesidades de cada persona.</p>
+          </div>
         </article>
         <article class="feature-card">
-          <span class="feature-icon">03</span>
-          <h3>Costes reales</h3>
-          <p>El coste se calcula con las jornadas registradas, para no pagar horas que no se han trabajado.</p>
+          <span class="icon-bubble violet">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20V7"/></svg>
+          </span>
+          <div>
+            <h3>Costes</h3>
+            <p>Mantén una visión clara de los costes asociados a la planificación y toma decisiones con información actualizada.</p>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="acceso" class="access-section">
-      <div>
-        <p class="eyebrow">Acceso</p>
-        <h2>Entra como encargado o trabajador.</h2>
-      <p>Accede con tu cuenta de TURU. El acceso se valida de forma segura con el backend y te lleva al panel cuando esté publicada la versión web.</p>
+    <section class="section why-panel" id="como-funciona" aria-labelledby="why-title">
+      <div class="why-intro">
+        <p class="eyebrow">Por qué Turito</p>
+        <h2 id="why-title">Diseñado para simplificar el día a día</h2>
+        <p>Una herramienta clara, rápida y accesible para que gestionar un equipo no se convierta en otra tarea complicada.</p>
       </div>
-      <form class="login-card" id="loginForm">
-        <img src="assets/turito-logo.png" alt="" width="78" height="78">
-        <h3>Iniciar sesion</h3>
-        <label>
-          Usuario o correo
-          <input type="email" name="email" placeholder="tu@email.com" autocomplete="email">
-        </label>
-        <label>
-          Contraseña
-          <input type="password" name="password" placeholder="Tu contraseña" autocomplete="current-password">
-        </label>
-        <button class="button primary full" type="submit" id="loginButton">Entrar</button>
-        <p class="form-status" id="loginStatus" role="status" aria-live="polite"></p>
-        <div class="login-links">
-          <a href="#acceso">Registrar negocio</a>
-          <a href="#acceso">Tengo invitacion</a>
-        </div>
-      </form>
-    </section>
-
-    <section class="section split">
-      <div>
-        <p class="eyebrow">Para negocios</p>
-        <h2>Diseñado para bares, discotecas, restaurantes y equipos por turnos.</h2>
-      </div>
-      <div class="check-list">
-        <p>Control de plantilla activa e inactiva.</p>
-        <p>Salario por hora editable por trabajador.</p>
-        <p>Exportacion de registros para cierre de mes.</p>
-        <p>Notificaciones al publicar o modificar cuadrantes.</p>
+      <div class="benefit-list">
+        <article>
+          <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m13 2-9 12h8l-1 8 9-12h-8l1-8Z"/></svg></span>
+          <div><h3>Información centralizada</h3><p>Todo en un mismo lugar.</p></div>
+        </article>
+        <article>
+          <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M8.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM17 11l2 2 4-4"/></svg></span>
+          <div><h3>Gestión de equipos</h3><p>Coordina de forma sencilla.</p></div>
+        </article>
+        <article>
+          <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg></span>
+          <div><h3>Planificación clara</h3><p>Turnos bien organizados.</p></div>
+        </article>
+        <article>
+          <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6v5h-5M4 18v-5h5M18.4 9A7 7 0 0 0 6.2 6.2L4 9M5.6 15A7 7 0 0 0 17.8 17.8L20 15"/></svg></span>
+          <div><h3>Datos siempre sincronizados</h3><p>Cambios en tiempo real.</p></div>
+        </article>
+        <article>
+          <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg></span>
+          <div><h3>Acceso desde cualquier lugar</h3><p>En tus dispositivos favoritos.</p></div>
+        </article>
+        <article>
+          <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div><h3>Seguro y confiable</h3><p>Tus datos protegidos.</p></div>
+        </article>
       </div>
     </section>
 
-    <section id="faq" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">FAQ</p>
-        <h2>Preguntas frecuentes</h2>
-      </div>
-      <div class="faq-list">
-        <details>
-          <summary>¿TURU sustituye al fichaje?</summary>
-          <p>TURU permite registrar jornadas reales y compararlas con el cuadrante previsto. Para uso legal definitivo conviene validar los requisitos laborales de cada negocio.</p>
-        </details>
-        <details>
-          <summary>¿El trabajador ve costes del negocio?</summary>
-          <p>No. El trabajador ve su calendario, turnos, disponibilidad, jornadas y cuenta. Los costes quedan para perfiles de encargado.</p>
-        </details>
-        <details>
-          <summary>¿Puedo usarlo en movil y escritorio?</summary>
-          <p>Si. El trabajador esta pensado para movil y el encargado para movil, tablet y escritorio.</p>
-        </details>
-        <details>
-          <summary>¿Como se invita a un trabajador?</summary>
-          <p>El negocio genera un codigo o invitacion. El trabajador crea su cuenta y queda vinculado a ese negocio.</p>
-        </details>
+    <section class="section cta-panel" id="precios" aria-labelledby="cta-title">
+      <div class="cta-circle circle-one"></div>
+      <div class="cta-circle circle-two"></div>
+      <div class="cta-content">
+        <p>Empieza hoy</p>
+        <h2 id="cta-title">Organiza tu equipo con Turito</h2>
+        <span>Turnos, disponibilidad y costes. Todo en un mismo lugar.</span>
+        <button class="button light" type="button" data-login-open>
+          Empezar ahora
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6M4 12h11"/></svg>
+        </button>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div>
-      <strong>TURU</strong>
-      <p>Gestion de turnos para equipos reales.</p>
+  <footer class="site-footer" id="contacto">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio">
+          <img src="assets/turito-logo.png" alt="" width="42" height="42">
+          <span>Turito</span>
+        </a>
+        <p>Turnos, disponibilidad y costes.<br>Todo bajo control.</p>
+        <div class="social-links" aria-label="Redes sociales">
+          <a href="mailto:hola@turito.es" aria-label="Contactar con Turito">@</a>
+          <a href="mailto:hola@turito.es" aria-label="Instagram">◎</a>
+          <a href="mailto:hola@turito.es" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <nav class="footer-column" aria-label="Producto">
+        <strong>Producto</strong>
+        <a href="#funciones">Funciones</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#precios">Precios</a>
+        <button type="button" data-login-open>Iniciar sesión</button>
+        <a href="mailto:hola@turito.es?subject=Quiero%20descargar%20Turito">Descargar app</a>
+      </nav>
+      <nav class="footer-column" aria-label="Legal">
+        <strong>Legal</strong>
+        <a href="privacy.html">Política de privacidad</a>
+        <a href="legal.html">Términos y condiciones</a>
+        <a href="cookies.html">Política de cookies</a>
+        <a href="privacy.html">Tratamiento de datos</a>
+      </nav>
+      <nav class="footer-column" aria-label="Ayuda">
+        <strong>Ayuda</strong>
+        <a href="faq.html">FAQ</a>
+        <a href="mailto:hola@turito.es">Contacto</a>
+        <a href="mailto:hola@turito.es?subject=Soporte%20Turito">Soporte</a>
+      </nav>
+      <form class="newsletter" id="newsletterForm">
+        <strong>Mantente al día</strong>
+        <p>Recibe novedades y actualizaciones de Turito.</p>
+        <label class="sr-only" for="newsletterEmail">Tu correo electrónico</label>
+        <div>
+          <input id="newsletterEmail" type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit" aria-label="Suscribirme">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6M4 12h11"/></svg>
+          </button>
+        </div>
+        <span class="newsletter-status" id="newsletterStatus" role="status" aria-live="polite"></span>
+      </form>
     </div>
-    <nav aria-label="Legal">
-      <a href="privacy.html">Privacidad</a>
-      <a href="cookies.html">Cookies</a>
-      <a href="legal.html">Aviso legal</a>
-      <a href="faq.html">FAQ</a>
-      <a href="mailto:hola@turito.es">Contacto</a>
-    </nav>
+    <div class="footer-bottom">
+      <span>© 2026 Turito. Todos los derechos reservados.</span>
+      <span>◉&nbsp; Español⌄</span>
+    </div>
   </footer>
+
+  <dialog class="login-dialog" id="loginDialog" aria-labelledby="loginTitle">
+    <button class="dialog-close" type="button" aria-label="Cerrar acceso" data-login-close>×</button>
+    <form class="login-card" id="loginForm" method="dialog">
+      <img src="assets/turito-logo.png" alt="" width="68" height="68">
+      <p class="eyebrow">Bienvenido de nuevo</p>
+      <h2 id="loginTitle">Iniciar sesión</h2>
+      <label>
+        Usuario o correo
+        <input type="email" name="email" placeholder="tu@email.com" autocomplete="email">
+      </label>
+      <label>
+        Contraseña
+        <input type="password" name="password" placeholder="Tu contraseña" autocomplete="current-password">
+      </label>
+      <button class="button primary full" type="submit" id="loginButton">Entrar</button>
+      <p class="form-status" id="loginStatus" role="status" aria-live="polite"></p>
+      <div class="login-links">
+        <a href="mailto:hola@turito.es?subject=Registrar%20negocio">Registrar negocio</a>
+        <a href="mailto:hola@turito.es?subject=Tengo%20una%20invitación">Tengo invitación</a>
+      </div>
+    </form>
+  </dialog>
 
   <div class="cookie-banner" id="cookieBanner" hidden>
     <p>Usamos cookies esenciales para que la web funcione. Si añadimos analítica, te pediremos permiso antes.</p>

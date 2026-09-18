@@ -3,7 +3,48 @@ const acceptCookies = document.getElementById("acceptCookies");
 const loginForm = document.getElementById("loginForm");
 const loginButton = document.getElementById("loginButton");
 const loginStatus = document.getElementById("loginStatus");
+const loginDialog = document.getElementById("loginDialog");
+const menuButton = document.querySelector(".menu-button");
+const mainNav = document.getElementById("mainNav");
+const newsletterForm = document.getElementById("newsletterForm");
+const newsletterStatus = document.getElementById("newsletterStatus");
 const config = window.TURU_CONFIG ?? {};
+
+document.querySelectorAll("[data-login-open]").forEach((button) => {
+  button.addEventListener("click", () => {
+    if (typeof loginDialog?.showModal === "function") {
+      loginDialog.showModal();
+      window.setTimeout(() => loginForm?.elements.email?.focus(), 80);
+    }
+  });
+});
+
+document.querySelector("[data-login-close]")?.addEventListener("click", () => {
+  loginDialog?.close();
+});
+
+loginDialog?.addEventListener("click", (event) => {
+  if (event.target === loginDialog) loginDialog.close();
+});
+
+menuButton?.addEventListener("click", () => {
+  const isOpen = mainNav?.classList.toggle("open") ?? false;
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+});
+
+mainNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
+  });
+});
+
+newsletterForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  newsletterStatus.textContent = "¡Gracias! Te mantendremos al día.";
+  newsletterForm.reset();
+});
 
 if (cookieBanner && localStorage.getItem("turu_cookie_notice") !== "accepted") {
   cookieBanner.hidden = false;
