@@ -422,7 +422,7 @@ h1 span {
 }
 
 .phone-front {
-  bottom: -105px;
+  bottom: -165px;
   left: 12%;
   z-index: 3;
   transform: rotate(-2deg);
@@ -430,7 +430,7 @@ h1 span {
 
 .phone-back {
   right: -1%;
-  bottom: -135px;
+  bottom: -190px;
   width: 318px;
   transform: rotate(2deg);
 }
@@ -1123,10 +1123,13 @@ h1 span {
 
   .hero-inner {
     grid-template-columns: 1fr;
+    min-width: 0;
     padding-top: 105px;
   }
 
   .hero-copy {
+    width: 100%;
+    min-width: 0;
     max-width: 700px;
     margin: 0 auto;
     padding: 48px 0 10px;
@@ -1143,7 +1146,7 @@ h1 span {
   }
 
   .phone-stage {
-    width: 660px;
+    width: min(660px, 100%);
     min-width: 0;
     height: 560px;
     margin: 0 auto;
@@ -1223,11 +1226,13 @@ h1 span {
   }
 
   h1 {
-    font-size: clamp(40px, 12vw, 54px);
+    font-size: clamp(38px, 10.5vw, 44px);
+    line-height: 1.05;
   }
 
   .hero-text {
-    font-size: 17px;
+    max-width: 350px;
+    font-size: 16px;
   }
 
   .hero-actions {
@@ -1254,25 +1259,25 @@ h1 span {
   }
 
   .phone-stage {
-    width: 470px;
-    height: 450px;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    height: 420px;
+    margin: 18px 0 0;
+    transform: none;
   }
 
   .phone {
-    width: 235px;
+    width: min(61vw, 230px);
   }
 
   .phone-front {
     bottom: -45px;
-    left: 7%;
+    left: 0;
   }
 
   .phone-back {
-    right: 6%;
-    bottom: -75px;
-    width: 224px;
+    right: 0;
+    bottom: -68px;
+    width: min(57vw, 216px);
   }
 
   .hero::after {
