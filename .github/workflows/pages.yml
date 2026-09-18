@@ -1,4 +1,4 @@
-name: Deploy TURU landing
+name: Publicar landing en GitHub Pages
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: github-pages
   cancel-in-progress: true
 
 jobs:
@@ -21,17 +21,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Descargar repositorio
         uses: actions/checkout@v4
 
-      - name: Configure Pages
+      - name: Configurar Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload site
+      - name: Preparar archivos de la landing
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
-      - name: Deploy
+      - name: Publicar en GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
