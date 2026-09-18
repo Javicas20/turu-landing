@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TURU | Gestiona turnos, disponibilidad y costes</title>
+  <meta name="description" content="TURU ayuda a negocios de hosteleria y ocio a organizar turnos, disponibilidad, jornadas y costes reales desde una sola herramienta.">
+  <link rel="icon" href="assets/turito-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Inicio TURU">
+      <img src="assets/turito-logo.png" alt="" width="44" height="44">
+      <span>TURU</span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#producto">Producto</a>
+      <a href="#acceso">Acceso</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="legal.html">Legal</a>
+    </nav>
+    <a class="header-cta" href="#acceso">Iniciar sesion</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">www.turito.es</p>
+        <h1>Turnos, disponibilidad y costes bajo control.</h1>
+        <p class="hero-text">Organiza tu plantilla, publica cuadrantes, compara horas previstas con jornadas reales y controla salarios sin hojas eternas.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#acceso">Entrar a TURU</a>
+          <a class="button secondary" href="mailto:hola@turito.es?subject=Demo%20TURU">Solicitar demo</a>
+        </div>
+      </div>
+      <div class="product-panel" aria-label="Vista previa del producto">
+        <div class="panel-top">
+          <span>Septiembre 2026</span>
+          <strong>Resumen</strong>
+        </div>
+        <div class="metric-grid">
+          <article><span>Horas</span><strong>667.7 h</strong></article>
+          <article><span>Previstas</span><strong>934.0 h</strong></article>
+          <article><span>Coste</span><strong>7.515,18 €</strong></article>
+          <article><span>Equipo</span><strong>21</strong></article>
+        </div>
+        <div class="schedule-card">
+          <span class="status-dot"></span>
+          <div>
+            <strong>Viernes 20</strong>
+            <p>Barra principal · 20:30 - 04:30</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="producto" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Producto</p>
+        <h2>Una operativa clara para encargados y trabajadores.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">01</span>
+          <h3>Disponibilidad</h3>
+          <p>Los trabajadores indican que dias pueden trabajar, todo el dia, por horas o si no pueden.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">02</span>
+          <h3>Cuadrantes</h3>
+          <p>El encargado genera turnos por dia, zona, puesto y horario, y los publica al equipo.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">03</span>
+          <h3>Costes reales</h3>
+          <p>El coste se calcula con las jornadas registradas, para no pagar horas que no se han trabajado.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="acceso" class="access-section">
+      <div>
+        <p class="eyebrow">Acceso</p>
+        <h2>Entra como encargado o trabajador.</h2>
+      <p>Accede con tu cuenta de TURU. El acceso se valida de forma segura con el backend y te lleva al panel cuando esté publicada la versión web.</p>
+      </div>
+      <form class="login-card" id="loginForm">
+        <img src="assets/turito-logo.png" alt="" width="78" height="78">
+        <h3>Iniciar sesion</h3>
+        <label>
+          Usuario o correo
+          <input type="email" name="email" placeholder="tu@email.com" autocomplete="email">
+        </label>
+        <label>
+          Contrasena
+          <input type="password" name="password" placeholder="Tu contrasena" autocomplete="current-password">
+        </label>
+        <button class="button primary full" type="submit" id="loginButton">Entrar</button>
+        <p class="form-status" id="loginStatus" role="status" aria-live="polite"></p>
+        <div class="login-links">
+          <a href="#acceso">Registrar negocio</a>
+          <a href="#acceso">Tengo invitacion</a>
+        </div>
+      </form>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Para negocios</p>
+        <h2>Diseñado para bares, discotecas, restaurantes y equipos por turnos.</h2>
+      </div>
+      <div class="check-list">
+        <p>Control de plantilla activa e inactiva.</p>
+        <p>Salario por hora editable por trabajador.</p>
+        <p>Exportacion de registros para cierre de mes.</p>
+        <p>Notificaciones al publicar o modificar cuadrantes.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>¿TURU sustituye al fichaje?</summary>
+          <p>TURU permite registrar jornadas reales y compararlas con el cuadrante previsto. Para uso legal definitivo conviene validar los requisitos laborales de cada negocio.</p>
+        </details>
+        <details>
+          <summary>¿El trabajador ve costes del negocio?</summary>
+          <p>No. El trabajador ve su calendario, turnos, disponibilidad, jornadas y cuenta. Los costes quedan para perfiles de encargado.</p>
+        </details>
+        <details>
+          <summary>¿Puedo usarlo en movil y escritorio?</summary>
+          <p>Si. El trabajador esta pensado para movil y el encargado para movil, tablet y escritorio.</p>
+        </details>
+        <details>
+          <summary>¿Como se invita a un trabajador?</summary>
+          <p>El negocio genera un codigo o invitacion. El trabajador crea su cuenta y queda vinculado a ese negocio.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>TURU</strong>
+      <p>Gestion de turnos para equipos reales.</p>
+    </div>
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+      <a href="legal.html">Aviso legal</a>
+      <a href="faq.html">FAQ</a>
+      <a href="mailto:hola@turito.es">Contacto</a>
+    </nav>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner" hidden>
+    <p>Usamos cookies esenciales para que la web funcione. Si anadimos analitica, te pediremos permiso antes.</p>
+    <div>
+      <a href="cookies.html">Ver politica</a>
+      <button type="button" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="app-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
