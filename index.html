@@ -26,8 +26,8 @@
       </nav>
 
       <div class="header-actions">
-        <button class="text-button" type="button" data-login-open>Iniciar sesión</button>
-        <button class="button primary compact" type="button" data-login-open>Empezar ahora</button>
+        <a class="text-button" href="https://app.turito.es/" data-app-link>Iniciar sesión</a>
+        <a class="button primary compact" href="#precios">Empezar ahora</a>
         <button class="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
           <span></span><span></span><span></span>
         </button>
@@ -45,11 +45,11 @@
           <h1 id="hero-title">Turnos, disponibilidad y costes. <span>Todo bajo control.</span></h1>
           <p class="hero-text">Gestiona la operativa de tu equipo desde un único lugar, de forma clara y sencilla.</p>
           <div class="hero-actions">
-            <button class="button primary" type="button" data-login-open>
+            <a class="button primary" href="#precios">
               Empezar con Turito
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6M4 12h11"/></svg>
-            </button>
-            <button class="button secondary" type="button" data-login-open>Iniciar sesión</button>
+            </a>
+            <a class="button secondary" href="https://app.turito.es/" data-app-link>Iniciar sesión</a>
           </div>
           <div class="store-links" aria-label="Aplicaciones móviles">
             <a class="store-badge" href="mailto:hola@turito.es?subject=Quiero%20Turito%20para%20Android" aria-label="Solicitar Turito para Android">
@@ -143,17 +143,95 @@
       </div>
     </section>
 
-    <section class="section cta-panel" id="precios" aria-labelledby="cta-title">
+    <section class="section pricing-section" id="precios" aria-labelledby="pricing-title">
+      <div class="section-heading centered">
+        <p class="eyebrow">Precios</p>
+        <h2 id="pricing-title">Un plan para cada tamaño de equipo</h2>
+        <p>Precios sencillos y transparentes, con todas las herramientas necesarias para organizar tu negocio.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="price-card price-card-blue">
+          <div class="plan-heading">
+            <span class="plan-icon">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg>
+            </span>
+            <div>
+              <p>Plan Esencial</p>
+              <h3>Hasta 10 trabajadores</h3>
+            </div>
+          </div>
+          <div class="plan-price">
+            <strong>25 €</strong>
+            <span>+ IVA / mes</span>
+          </div>
+          <ul class="plan-features">
+            <li>Planificación de turnos</li>
+            <li>Disponibilidad del equipo</li>
+            <li>Registro de jornadas</li>
+          </ul>
+          <a class="plan-button" href="mailto:hola@turito.es?subject=Plan%20Esencial%20Turito">Elegir plan</a>
+        </article>
+
+        <article class="price-card price-card-green featured-plan">
+          <span class="popular-badge">Más popular</span>
+          <div class="plan-heading">
+            <span class="plan-icon">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M8.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM17 11l2 2 4-4"/></svg>
+            </span>
+            <div>
+              <p>Plan Equipo</p>
+              <h3>Hasta 30 trabajadores</h3>
+            </div>
+          </div>
+          <div class="plan-price">
+            <strong>60 €</strong>
+            <span>+ IVA / mes</span>
+          </div>
+          <ul class="plan-features">
+            <li>Todo lo incluido en Esencial</li>
+            <li>Control de costes y salarios</li>
+            <li>Exportación de registros</li>
+          </ul>
+          <a class="plan-button" href="mailto:hola@turito.es?subject=Plan%20Equipo%20Turito">Elegir plan</a>
+        </article>
+
+        <article class="price-card price-card-violet">
+          <div class="plan-heading">
+            <span class="plan-icon">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 21v-8l5-3v11M8 21V5l6-3v19M14 21v-9l7-3v12M1 21h22"/></svg>
+            </span>
+            <div>
+              <p>Plan Empresa</p>
+              <h3>Más de 30 trabajadores</h3>
+            </div>
+          </div>
+          <div class="plan-price">
+            <strong>100 €</strong>
+            <span>+ IVA / mes</span>
+          </div>
+          <ul class="plan-features">
+            <li>Todo lo incluido en Equipo</li>
+            <li>Gestión para equipos grandes</li>
+            <li>Soporte prioritario</li>
+          </ul>
+          <a class="plan-button" href="mailto:hola@turito.es?subject=Plan%20Empresa%20Turito">Elegir plan</a>
+        </article>
+      </div>
+      <p class="pricing-note">Sin permanencia. Podrás cambiar de plan cuando cambie el tamaño de tu equipo.</p>
+    </section>
+
+    <section class="section cta-panel" id="empezar" aria-labelledby="cta-title">
       <div class="cta-circle circle-one"></div>
       <div class="cta-circle circle-two"></div>
       <div class="cta-content">
         <p>Empieza hoy</p>
         <h2 id="cta-title">Organiza tu equipo con Turito</h2>
         <span>Turnos, disponibilidad y costes. Todo en un mismo lugar.</span>
-        <button class="button light" type="button" data-login-open>
+        <a class="button light" href="#precios">
           Empezar ahora
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6M4 12h11"/></svg>
-        </button>
+        </a>
       </div>
     </section>
   </main>
@@ -177,7 +255,7 @@
         <a href="#funciones">Funciones</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#precios">Precios</a>
-        <button type="button" data-login-open>Iniciar sesión</button>
+        <a href="https://app.turito.es/" data-app-link>Iniciar sesión</a>
         <a href="mailto:hola@turito.es?subject=Quiero%20descargar%20Turito">Descargar app</a>
       </nav>
       <nav class="footer-column" aria-label="Legal">
@@ -212,29 +290,6 @@
     </div>
   </footer>
 
-  <dialog class="login-dialog" id="loginDialog" aria-labelledby="loginTitle">
-    <button class="dialog-close" type="button" aria-label="Cerrar acceso" data-login-close>×</button>
-    <form class="login-card" id="loginForm" method="dialog">
-      <img src="assets/turito-logo.png" alt="" width="68" height="68">
-      <p class="eyebrow">Bienvenido de nuevo</p>
-      <h2 id="loginTitle">Iniciar sesión</h2>
-      <label>
-        Usuario o correo
-        <input type="email" name="email" placeholder="tu@email.com" autocomplete="email">
-      </label>
-      <label>
-        Contraseña
-        <input type="password" name="password" placeholder="Tu contraseña" autocomplete="current-password">
-      </label>
-      <button class="button primary full" type="submit" id="loginButton">Entrar</button>
-      <p class="form-status" id="loginStatus" role="status" aria-live="polite"></p>
-      <div class="login-links">
-        <a href="mailto:hola@turito.es?subject=Registrar%20negocio">Registrar negocio</a>
-        <a href="mailto:hola@turito.es?subject=Tengo%20una%20invitación">Tengo invitación</a>
-      </div>
-    </form>
-  </dialog>
-
   <div class="cookie-banner" id="cookieBanner" hidden>
     <p>Usamos cookies esenciales para que la web funcione. Si añadimos analítica, te pediremos permiso antes.</p>
     <div>
@@ -244,7 +299,6 @@
   </div>
 
   <script src="app-config.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
 </body>
 </html>

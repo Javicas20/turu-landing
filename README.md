@@ -11,18 +11,23 @@ Landing estatica para `www.turito.es`.
 - `faq.html`: preguntas frecuentes.
 - `robots.txt` y `sitemap.xml`: preparacion SEO basica.
 
-## Backend y acceso
+## Acceso al panel
 
-La landing ya usa Supabase Auth desde el navegador con la publishable key. El login valida el correo y la contrasena contra el mismo proyecto que usa la app. No se incluye ninguna service-role key.
+La landing no autentica usuarios ni recibe contraseñas. Todos los enlaces de acceso llevan a `https://app.turito.es/`, donde la aplicación web gestiona el login, el registro y la sesión con Supabase.
 
-`app-config.js` contiene la configuracion publica del navegador:
+Este flujo es necesario porque `www.turito.es` y `app.turito.es` son orígenes distintos y no comparten el almacenamiento local de sesión del navegador. Autenticar directamente en el panel evita transferir tokens por la URL y mantiene la sesión disponible para la aplicación.
 
-- `supabaseUrl`: URL del proyecto Supabase.
-- `supabasePublishableKey`: clave publica para clientes.
-- `appUrl`: URL del panel web. Mientras este vacia, el login valida correctamente pero muestra que el panel web aun no esta publicado.
-- `authRedirectUrl`: URL que debe autorizarse en Supabase para confirmacion y recuperacion de cuenta.
+`app-config.js` contiene `appUrl`, la dirección pública del panel. Los enlaces conservan también esa URL en el HTML para funcionar aunque JavaScript no se cargue.
 
-La aplicacion actual es Kotlin Multiplatform para Android, iOS y escritorio; no tiene target web. Para que el boton pueda abrir un panel desde `www.turito.es` hay que publicar una interfaz web o crear un target web KMP y poner su URL en `appUrl`. La landing no puede convertir automaticamente la app de escritorio en una web.
+### Requisitos para que el enlace funcione en producción
+
+1. Integrar en la rama `main` de la aplicación el target web y el workflow `deploy-web-app.yml`.
+2. Activar GitHub Pages con `GitHub Actions` como fuente en el repositorio de la aplicación.
+3. Sustituir el destino DNS actual de `app.turito.es` por un CNAME a `Javicas20.github.io`.
+4. Configurar `app.turito.es` como dominio personalizado de GitHub Pages y esperar a que el certificado HTTPS esté activo.
+5. Mantener `https://app.turito.es/**` entre las Redirect URLs autorizadas de Supabase Auth.
+
+Hasta completar esos pasos, `app.turito.es` puede redirigir a la landing o fallar por HTTPS aunque los enlaces de la landing ya apunten al destino correcto.
 
 ## Publicar `www.turito.es`
 
@@ -32,7 +37,7 @@ La aplicacion actual es Kotlin Multiplatform para Android, iOS y escritorio; no 
 4. En GitHub Pages, añade el dominio personalizado `www.turito.es` y activa HTTPS.
 5. Configura `turito.es` con una redirección al `www` o con los registros A/ALIAS que indique el registrador.
 6. En Supabase, abre `Authentication > URL Configuration` y añade `https://www.turito.es/**` y `https://turito.es/**` a `Redirect URLs`.
-7. Cuando exista el panel web, cambia `appUrl` en `app-config.js` y vuelve a publicar.
+7. Publica la aplicación web en `https://app.turito.es/` y verifica que su pantalla de autenticación carga correctamente.
 
 ## Pendiente antes de publicar
 
