@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <header class="site-header" id="inicio">
     <div class="header-inner">
       <a class="brand" href="#inicio" aria-label="Ir al inicio de Turito">
@@ -37,12 +38,14 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-aurora" aria-hidden="true"></div>
       <div class="hero-orb hero-orb-one"></div>
       <div class="hero-orb hero-orb-two"></div>
       <div class="hero-inner">
-        <div class="hero-copy">
+        <div class="hero-copy" data-reveal="hero">
           <p class="eyebrow">Organiza. Coordina. Controla.</p>
-          <h1 id="hero-title">Turnos, disponibilidad y costes. <span>Todo bajo control.</span></h1>
+          <h1 id="hero-title">Turnos, disponibilidad y costes. <span class="gradient-text">Todo bajo control.</span></h1>
           <p class="hero-text">Gestiona la operativa de tu equipo desde un único lugar, de forma clara y sencilla.</p>
           <div class="hero-actions">
             <a class="button primary" href="#precios">
@@ -63,23 +66,52 @@
           </div>
         </div>
 
-        <div class="phone-stage" aria-label="Capturas de la aplicación móvil Turito">
+        <div class="phone-stage" aria-label="Capturas de la aplicación móvil Turito" data-phone-stage>
           <div class="phone-glow"></div>
+          <div class="floating-chip chip-shift" aria-hidden="true">
+            <span class="chip-icon">✓</span>
+            <span><strong>Turno confirmado</strong><small>Equipo actualizado</small></span>
+          </div>
+          <div class="floating-chip chip-cost" aria-hidden="true">
+            <span class="chip-trend">↘ 12%</span>
+            <span><strong>Costes optimizados</strong><small>Este mes</small></span>
+          </div>
+          <div class="floating-chip chip-live" aria-hidden="true">
+            <span class="live-dot"></span>
+            <span><strong>En tiempo real</strong><small>Todo sincronizado</small></span>
+          </div>
           <img class="phone phone-back" src="assets/turito-home.png" alt="Pantalla de inicio de Turito con el resumen del mes" width="642" height="1362">
           <img class="phone phone-front" src="assets/turito-calendar.png" alt="Calendario de turnos y disponibilidad en Turito" width="674" height="1362">
         </div>
       </div>
+      <a class="scroll-cue" href="#funciones" aria-label="Descubrir las funcionalidades">
+        <span>Descubre Turito</span>
+        <i aria-hidden="true"></i>
+      </a>
     </section>
 
+    <div class="benefit-ticker" aria-label="Ventajas principales de Turito">
+      <div class="ticker-track" aria-hidden="true">
+        <span><i></i> Turnos sin caos</span>
+        <span><i></i> Costes siempre visibles</span>
+        <span><i></i> Disponibilidad en tiempo real</span>
+        <span><i></i> Todo el equipo conectado</span>
+        <span><i></i> Turnos sin caos</span>
+        <span><i></i> Costes siempre visibles</span>
+        <span><i></i> Disponibilidad en tiempo real</span>
+        <span><i></i> Todo el equipo conectado</span>
+      </div>
+    </div>
+
     <section class="section features" id="funciones" aria-labelledby="features-title">
-      <div class="section-heading centered">
+      <div class="section-heading centered" data-reveal>
         <p class="eyebrow">Funcionalidades</p>
         <h2 id="features-title">Todo lo que necesitas, en un solo lugar</h2>
         <p>Turito simplifica la gestión de turnos, disponibilidad y costes para que puedas centrarte en lo que realmente importa.</p>
       </div>
 
       <div class="feature-grid">
-        <article class="feature-card">
+        <article class="feature-card interactive-card" data-reveal data-delay="0">
           <span class="icon-bubble blue">
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 2v3M18 2v3M3.5 9h17M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M8 13h3v3H8zM14 13h2M8 19h2M14 19h2"/></svg>
           </span>
@@ -88,7 +120,7 @@
             <p>Planifica y organiza los turnos de forma clara para que cada persona sepa cuándo trabaja y qué tiene asignado.</p>
           </div>
         </article>
-        <article class="feature-card">
+        <article class="feature-card interactive-card" data-reveal data-delay="90">
           <span class="icon-bubble green">
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </span>
@@ -97,7 +129,7 @@
             <p>Consulta la disponibilidad de tu equipo y organiza la planificación teniendo en cuenta las necesidades de cada persona.</p>
           </div>
         </article>
-        <article class="feature-card">
+        <article class="feature-card interactive-card" data-reveal data-delay="180">
           <span class="icon-bubble violet">
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20V7"/></svg>
           </span>
@@ -109,34 +141,55 @@
       </div>
     </section>
 
-    <section class="section why-panel" id="como-funciona" aria-labelledby="why-title">
-      <div class="why-intro">
+    <section class="section impact-strip" aria-label="Turito en cifras" data-reveal>
+      <div class="impact-intro">
+        <p class="eyebrow">Menos gestión. Más control.</p>
+        <h2>Tu operativa se entiende<br>de un vistazo.</h2>
+      </div>
+      <div class="impact-metrics">
+        <article>
+          <strong><span data-counter="100">0</span>%</strong>
+          <p>de la planificación en un solo lugar</p>
+        </article>
+        <article>
+          <strong><span data-counter="24">0</span>/7</strong>
+          <p>acceso desde cualquier dispositivo</p>
+        </article>
+        <article>
+          <strong>&lt; <span data-counter="1">0</span> min</strong>
+          <p>para consultar el próximo turno</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section why-panel" id="como-funciona" aria-labelledby="why-title" data-reveal>
+      <div class="why-intro" data-reveal>
         <p class="eyebrow">Por qué Turito</p>
         <h2 id="why-title">Diseñado para simplificar el día a día</h2>
         <p>Una herramienta clara, rápida y accesible para que gestionar un equipo no se convierta en otra tarea complicada.</p>
       </div>
       <div class="benefit-list">
-        <article>
+        <article data-reveal data-delay="0">
           <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m13 2-9 12h8l-1 8 9-12h-8l1-8Z"/></svg></span>
           <div><h3>Información centralizada</h3><p>Todo en un mismo lugar.</p></div>
         </article>
-        <article>
+        <article data-reveal data-delay="70">
           <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M8.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM17 11l2 2 4-4"/></svg></span>
           <div><h3>Gestión de equipos</h3><p>Coordina de forma sencilla.</p></div>
         </article>
-        <article>
+        <article data-reveal data-delay="140">
           <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg></span>
           <div><h3>Planificación clara</h3><p>Turnos bien organizados.</p></div>
         </article>
-        <article>
+        <article data-reveal data-delay="210">
           <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6v5h-5M4 18v-5h5M18.4 9A7 7 0 0 0 6.2 6.2L4 9M5.6 15A7 7 0 0 0 17.8 17.8L20 15"/></svg></span>
           <div><h3>Datos siempre sincronizados</h3><p>Cambios en tiempo real.</p></div>
         </article>
-        <article>
+        <article data-reveal data-delay="280">
           <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></svg></span>
           <div><h3>Acceso desde cualquier lugar</h3><p>En tus dispositivos favoritos.</p></div>
         </article>
-        <article>
+        <article data-reveal data-delay="350">
           <span class="mini-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span>
           <div><h3>Seguro y confiable</h3><p>Tus datos protegidos.</p></div>
         </article>
@@ -144,14 +197,14 @@
     </section>
 
     <section class="section pricing-section" id="precios" aria-labelledby="pricing-title">
-      <div class="section-heading centered">
+      <div class="section-heading centered" data-reveal>
         <p class="eyebrow">Precios</p>
         <h2 id="pricing-title">Un plan para cada tamaño de equipo</h2>
         <p>Precios sencillos y transparentes, con todas las herramientas necesarias para organizar tu negocio.</p>
       </div>
 
       <div class="pricing-grid">
-        <article class="price-card price-card-blue">
+        <article class="price-card price-card-blue interactive-card" data-reveal data-delay="0">
           <div class="plan-heading">
             <span class="plan-icon">
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg>
@@ -173,7 +226,7 @@
           <a class="plan-button" href="mailto:hola@turito.es?subject=Plan%20Esencial%20Turito">Elegir plan</a>
         </article>
 
-        <article class="price-card price-card-green featured-plan">
+        <article class="price-card price-card-green featured-plan interactive-card" data-reveal data-delay="100">
           <span class="popular-badge">Más popular</span>
           <div class="plan-heading">
             <span class="plan-icon">
@@ -196,7 +249,7 @@
           <a class="plan-button" href="mailto:hola@turito.es?subject=Plan%20Equipo%20Turito">Elegir plan</a>
         </article>
 
-        <article class="price-card price-card-violet">
+        <article class="price-card price-card-violet interactive-card" data-reveal data-delay="200">
           <div class="plan-heading">
             <span class="plan-icon">
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 21v-8l5-3v11M8 21V5l6-3v19M14 21v-9l7-3v12M1 21h22"/></svg>
@@ -221,7 +274,8 @@
       <p class="pricing-note">Sin permanencia. Podrás cambiar de plan cuando cambie el tamaño de tu equipo.</p>
     </section>
 
-    <section class="section cta-panel" id="empezar" aria-labelledby="cta-title">
+    <section class="section cta-panel" id="empezar" aria-labelledby="cta-title" data-reveal>
+      <div class="cta-grid" aria-hidden="true"></div>
       <div class="cta-circle circle-one"></div>
       <div class="cta-circle circle-two"></div>
       <div class="cta-content">
