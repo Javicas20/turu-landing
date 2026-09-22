@@ -1932,9 +1932,13 @@ h1 span {
   transition: opacity .25s ease;
 }
 
-.interactive-card > * {
+.interactive-card > :not(.popular-badge) {
   position: relative;
   z-index: 1;
+}
+
+.interactive-card > .popular-badge {
+  z-index: 3;
 }
 
 .interactive-card:hover::after {
