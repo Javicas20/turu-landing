@@ -4,11 +4,13 @@ Landing estatica para `www.turito.es`.
 
 ## Archivos principales
 
-- `index.html`: pagina principal con hero, producto, acceso, FAQ y banner de cookies.
+- `index.html`: pagina principal con hero, producto, acceso, precios y enlaces de ayuda.
 - `privacy.html`: politica de privacidad inicial.
-- `cookies.html`: politica de cookies inicial.
+- `cookies.html`: politica de cookies y almacenamiento tecnico.
 - `legal.html`: aviso legal inicial.
 - `faq.html`: preguntas frecuentes.
+- `guia.html`: guia de producto y primeros pasos.
+- `PRIVACY_SECURITY_COMPLIANCE.md`: auditoria interna y plan previo al lanzamiento.
 - `robots.txt` y `sitemap.xml`: preparacion SEO basica.
 
 ## Acceso al panel
@@ -42,4 +44,5 @@ Hasta completar esos pasos, `app.turito.es` puede redirigir a la landing o falla
 ## Pendiente antes de publicar
 
 - Completar datos reales del titular en `legal.html`.
-- Revisar la politica de privacidad con los servicios finales usados en produccion.
+- Sustituir la politica de privacidad inicial por la version revisada con identidad, proveedores, plazos y bases juridicas definitivas.
+- Cerrar todos los bloqueos P0 de `PRIVACY_SECURITY_COMPLIANCE.md`.

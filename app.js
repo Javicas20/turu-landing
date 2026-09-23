@@ -1,10 +1,6 @@
-const cookieBanner = document.getElementById("cookieBanner");
 document.documentElement.classList.add("js");
-const acceptCookies = document.getElementById("acceptCookies");
 const menuButton = document.querySelector(".menu-button");
 const mainNav = document.getElementById("mainNav");
-const newsletterForm = document.getElementById("newsletterForm");
-const newsletterStatus = document.getElementById("newsletterStatus");
 const config = window.TURU_CONFIG ?? {};
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const header = document.querySelector(".site-header");
@@ -25,21 +21,6 @@ mainNav?.querySelectorAll("a").forEach((link) => {
     mainNav.classList.remove("open");
     menuButton?.setAttribute("aria-expanded", "false");
   });
-});
-
-newsletterForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  newsletterStatus.textContent = "¡Gracias! Te mantendremos al día.";
-  newsletterForm.reset();
-});
-
-if (cookieBanner && localStorage.getItem("turu_cookie_notice") !== "accepted") {
-  cookieBanner.hidden = false;
-}
-
-acceptCookies?.addEventListener("click", () => {
-  localStorage.setItem("turu_cookie_notice", "accepted");
-  cookieBanner.hidden = true;
 });
 
 function updateScrollState() {
