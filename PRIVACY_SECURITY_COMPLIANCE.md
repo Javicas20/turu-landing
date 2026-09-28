@@ -2,7 +2,7 @@
 
 > Documento interno de trabajo. No sustituye la revisión de un profesional jurídico. No declarar el producto «conforme» hasta cerrar todos los bloqueos de la sección 2.
 
-Última revisión: 23 de septiembre de 2026.
+Última revisión: 28 de septiembre de 2026.
 
 ## 1. Criterio de cumplimiento
 
@@ -27,6 +27,7 @@ Los textos públicos son solo una parte. El cumplimiento exige que las política
 - [ ] Implementar procedimiento verificable de acceso, rectificación, supresión, oposición, limitación y portabilidad.
 - [ ] Implementar baja de cuenta/empresa sin destruir registros laborales que el cliente deba conservar legalmente.
 - [ ] Añadir información de primera capa en registro, invitación, soporte, newsletter y activación de notificaciones.
+- [ ] Implementar la aceptación expresa y versionada de las Condiciones según `REGISTRATION_PRIVACY_SPEC.md`; no usar un consentimiento general al tratamiento.
 - [ ] Preparar protocolo de incidentes y brechas, registro de incidentes y responsables de decisión dentro del plazo de 72 horas.
 - [ ] Realizar análisis de riesgos RGPD y documentar si procede o no una Evaluación de Impacto (EIPD).
 - [ ] Revisión final por asesoría especializada en privacidad, laboral y SaaS antes del lanzamiento.
@@ -182,6 +183,7 @@ La aplicación necesita herramientas internas para exportar el perfil completo, 
 - Registro de derechos e incidentes.
 - Ponderaciones de interés legítimo.
 - Consentimientos de marketing y retirada.
+- Aceptaciones de Condiciones con versión, fecha UTC, contexto, plataforma e idioma.
 - Formación y compromisos de confidencialidad.
 
 ## 13. Fuentes regulatorias de referencia

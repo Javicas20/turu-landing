@@ -10,6 +10,7 @@ Landing estatica para `www.turito.es`.
 - `legal.html`: aviso legal inicial.
 - `faq.html`: preguntas frecuentes.
 - `guia.html`: guia de producto y primeros pasos.
+- Los nuevos negocios crean su propia cuenta y disponen de una prueba gratuita de 10 días para un máximo de 10 trabajadores.
 - `PRIVACY_SECURITY_COMPLIANCE.md`: auditoria interna y plan previo al lanzamiento.
 - `robots.txt` y `sitemap.xml`: preparacion SEO basica.
 
@@ -30,6 +31,12 @@ Este flujo es necesario porque `www.turito.es` y `app.turito.es` son orígenes d
 5. Mantener `https://app.turito.es/**` entre las Redirect URLs autorizadas de Supabase Auth.
 
 Hasta completar esos pasos, `app.turito.es` puede redirigir a la landing o fallar por HTTPS aunque los enlaces de la landing ya apunten al destino correcto.
+
+## Flujo de prueba gratuita
+
+Los botones comerciales llevan al panel para que el interesado registre su propio negocio. La prueba se activa durante 10 días y admite un máximo de 10 trabajadores. Al finalizar, el negocio debe elegir un plan para continuar. La landing no cobra ni activa por sí misma ninguna suscripción.
+
+Las descargas de Android e iOS no se anuncian mientras las aplicaciones no estén publicadas en sus tiendas.
 
 ## Publicar `www.turito.es`
 

@@ -10,6 +10,10 @@ document.querySelectorAll("[data-app-link]").forEach((link) => {
   link.setAttribute("href", config.appUrl || "https://app.turito.es/");
 });
 
+document.querySelectorAll("[data-signup-link]").forEach((link) => {
+  link.setAttribute("href", config.signupUrl || config.appUrl || "https://app.turito.es/");
+});
+
 menuButton?.addEventListener("click", () => {
   const isOpen = mainNav?.classList.toggle("open") ?? false;
   menuButton.setAttribute("aria-expanded", String(isOpen));
@@ -20,6 +24,7 @@ mainNav?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     mainNav.classList.remove("open");
     menuButton?.setAttribute("aria-expanded", "false");
+    menuButton?.setAttribute("aria-label", "Abrir menú");
   });
 });
 
