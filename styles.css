@@ -1766,6 +1766,7 @@ h1 span {
   .demo-steps li > span {
     width: 40px;
     height: 40px;
+  }
 
   .popular-badge {
     position: static;
