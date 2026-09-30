@@ -680,7 +680,7 @@ h1 span {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
   align-items: stretch;
 }
@@ -696,7 +696,7 @@ h1 span {
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--plan-accent) 24%, white);
   border-radius: 24px;
-  padding: 32px;
+  padding: 28px 24px;
   background: linear-gradient(160deg, var(--plan-soft), #fff 52%);
   box-shadow: 0 14px 40px rgba(20, 68, 122, .07);
   transition: transform .25s ease, box-shadow .25s ease;
@@ -721,6 +721,11 @@ h1 span {
 .price-card-green {
   --plan-accent: #00a978;
   --plan-soft: #eafbf5;
+}
+
+.price-card-amber {
+  --plan-accent: #df8100;
+  --plan-soft: #fff6e6;
 }
 
 .price-card-violet {
@@ -1482,6 +1487,10 @@ h1 span {
 
   .benefit-list {
     gap: 24px 30px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
