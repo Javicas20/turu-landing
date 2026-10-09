@@ -142,7 +142,7 @@ Estos controles son positivos, pero no sustituyen una revisión de configuració
 
 ## 9. Derechos de las personas
 
-Crear un procedimiento único en `caserojavier3@gmail.com` mientras no exista un buzón de privacidad corporativo:
+Crear un procedimiento único en `privacidad@turito.es` mientras no exista un buzón de privacidad corporativo:
 
 1. Registrar fecha, identidad, derecho solicitado y responsable interno.
 2. Verificar identidad sin recopilar documentación excesiva.

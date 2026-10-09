@@ -18,7 +18,7 @@ No utilizar «Al registrarte aceptas el tratamiento de tus datos» ni mezclar to
 
 Antes de **Crear negocio** se mostrará:
 
-> Responsable: titular legal de Turito. Finalidad: crear y proteger tu cuenta, prestar el servicio y atender soporte. Base: contrato, obligaciones legales e interés legítimo en la seguridad. Derechos: caserojavier3@gmail.com. Más información en la Política de privacidad.
+> Responsable: titular legal de Turito. Finalidad: crear y proteger tu cuenta, prestar el servicio y atender soporte. Base: contrato, obligaciones legales e interés legítimo en la seguridad. Derechos: privacidad@turito.es. Más información en la Política de privacidad.
 
 Elementos:
 

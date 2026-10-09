@@ -364,6 +364,10 @@ h1 span {
   margin-top: 28px;
 }
 
+.store-links + .web-availability {
+  margin-top: 14px;
+}
+
 .store-badge {
   display: inline-flex;
   min-width: 164px;
