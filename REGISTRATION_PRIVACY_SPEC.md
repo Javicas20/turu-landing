@@ -2,7 +2,7 @@
 
 Especificación pendiente de implementar en los flujos **Registrar negocio** y **Unirme al equipo** de la aplicación.
 
-Última revisión: 28 de septiembre de 2026.
+Última revisión: 9 de octubre de 2026.
 
 ## Criterio
 
@@ -34,6 +34,22 @@ Antes de **Enviar solicitud** se mostrará:
 > El negocio que te invita es responsable de los datos usados para gestionar tu relación laboral. Turito los trata por cuenta del negocio y es responsable de los datos necesarios para crear y proteger tu cuenta.
 
 Se exigirá la misma aceptación expresa de Condiciones. No se pedirá al trabajador que consienta el registro de jornada como base general del tratamiento.
+
+## Fotografía de perfil opcional
+
+La carga de la fotografía se ofrecerá después del alta y no se condicionará el acceso al servicio a que el usuario la añada. Junto al selector se mostrará:
+
+> Foto opcional. Será visible para los miembros autorizados de tu negocio y se utilizará únicamente para identificar tu perfil dentro de Turito. Puedes sustituirla o eliminarla cuando quieras.
+
+Requisitos de producto y backend:
+
+- permitir subir, sustituir y eliminar la fotografía sin solicitar consentimiento comercial ni agruparla con la aceptación de Condiciones;
+- admitir únicamente formatos de imagen y tamaños expresamente permitidos, validar el contenido real del archivo y generar una versión normalizada;
+- eliminar metadatos incrustados innecesarios, especialmente ubicación y datos EXIF;
+- utilizar almacenamiento privado y controles de acceso por negocio; no exponer una URL pública permanente;
+- registrar solo los eventos técnicos imprescindibles de cambio o eliminación, sin copiar la imagen en logs;
+- retirar la fotografía del uso ordinario al sustituirla, eliminarla o borrar la cuenta, dejando únicamente las copias residuales sujetas al ciclo de backups;
+- no aplicar reconocimiento facial, plantillas biométricas, análisis de emociones ni decisiones automatizadas sobre la imagen.
 
 ## Evidencia en backend
 

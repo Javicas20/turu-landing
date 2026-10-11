@@ -49,7 +49,7 @@ Los textos públicos son solo una parte. El cumplimiento exige que las política
 
 | Categoría | Datos | Interesados | Uso |
 |---|---|---|---|
-| Identificación | nombre, email, identificadores internos, avatar | encargados y trabajadores | cuenta, invitación y perfil |
+| Identificación | nombre, email, identificadores internos y fotografía de perfil opcional | encargados y trabajadores | cuenta, invitación, perfil e identificación dentro del equipo |
 | Organización | empresa, rol, estado, zonas y puestos | encargados y trabajadores | gestión de plantilla |
 | Disponibilidad | fecha, tramo, estado y nota libre | trabajadores | preparar cuadrantes |
 | Planificación | fechas, entrada/salida, zona, puesto y estado | trabajadores | publicar turnos |
@@ -82,6 +82,7 @@ No se han identificado decisiones automatizadas con efectos jurídicos. Turito n
 
 | Información | Plazo propuesto | Acción final |
 |---|---|---|
+| Fotografía de perfil | hasta que el usuario la sustituya, elimine o cierre su cuenta | retirar del uso ordinario y purgar conforme al ciclo de backups |
 | Registros diarios de jornada | 4 años | bloqueo y eliminación al vencer, salvo litigio |
 | Cuadrantes vinculados al registro | 4 años | eliminar o anonimizar tras el plazo |
 | Disponibilidad no convertida en jornada | 12 meses | eliminación automática |
