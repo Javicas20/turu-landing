@@ -299,7 +299,7 @@ svg {
 .hero-copy {
   position: relative;
   z-index: 5;
-  padding: 45px 0 38px;
+  padding: 45px 0 72px;
 }
 
 .eyebrow {
@@ -443,7 +443,7 @@ h1 span {
 .phone-stage {
   position: relative;
   align-self: stretch;
-  min-width: 620px;
+  min-width: 0;
   pointer-events: none;
 }
 
@@ -462,24 +462,41 @@ h1 span {
 .phone {
   position: absolute;
   z-index: 2;
-  width: 336px;
-  height: auto;
-  filter: drop-shadow(0 26px 30px rgba(27, 65, 92, .14));
-  border-radius: 18% / 9%;
+  width: 292px;
+  border-radius: 30px;
+  box-shadow:
+    0 2px 8px rgba(21, 56, 97, .07),
+    0 26px 54px rgba(21, 56, 97, .17);
   user-select: none;
 }
 
+.phone-screen {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1206 / 2622;
+  border-radius: inherit;
+  background: #f4f8ff;
+  box-shadow: inset 0 0 0 1px rgba(10, 36, 70, .08);
+}
+
+.phone-screen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .phone-front {
-  bottom: -165px;
-  left: 12%;
+  bottom: -92px;
+  left: 0;
   z-index: 3;
   transform: rotate(-2deg);
 }
 
 .phone-back {
-  right: -1%;
-  bottom: -190px;
-  width: 318px;
+  left: 46%;
+  bottom: -14px;
+  width: 254px;
   transform: rotate(2deg);
 }
 
@@ -1473,16 +1490,16 @@ h1 span {
   }
 
   .phone-stage {
-    min-width: 540px;
-    transform: translateX(-20px);
+    min-width: 0;
+    transform: none;
   }
 
   .phone {
-    width: 300px;
+    width: 266px;
   }
 
   .phone-back {
-    width: 286px;
+    width: 232px;
   }
 
   .why-panel {
@@ -1579,26 +1596,27 @@ h1 span {
   }
 
   .phone-stage {
-    width: min(660px, 100%);
+    width: min(620px, 100%);
     min-width: 0;
-    height: 560px;
+    height: 580px;
     margin: 0 auto;
     transform: none;
   }
 
   .phone {
-    width: 315px;
+    width: 278px;
   }
 
   .phone-front {
-    bottom: -90px;
-    left: 10%;
+    bottom: -54px;
+    left: 4%;
   }
 
   .phone-back {
-    right: 8%;
-    bottom: -130px;
-    width: 298px;
+    right: 4%;
+    left: auto;
+    bottom: 16px;
+    width: 242px;
   }
 
   .feature-grid {
@@ -1698,24 +1716,25 @@ h1 span {
 
   .phone-stage {
     width: 100%;
-    height: 420px;
+    height: 430px;
     margin: 18px 0 0;
     transform: none;
   }
 
   .phone {
-    width: min(61vw, 230px);
+    width: min(52vw, 198px);
   }
 
   .phone-front {
-    bottom: -45px;
+    bottom: -28px;
     left: 0;
   }
 
   .phone-back {
     right: 0;
-    bottom: -68px;
-    width: min(57vw, 216px);
+    left: auto;
+    bottom: 14px;
+    width: min(46vw, 174px);
   }
 
   .hero::after {
@@ -2011,7 +2030,7 @@ h1 span {
 }
 
 .phone {
-  transition: transform .35s cubic-bezier(.2, .8, .2, 1), filter .35s ease;
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s ease;
   will-change: transform;
 }
 
@@ -2024,7 +2043,9 @@ h1 span {
 }
 
 .phone-stage:hover .phone-front {
-  filter: drop-shadow(0 34px 38px rgba(27, 65, 92, .2));
+  box-shadow:
+    0 2px 8px rgba(21, 56, 97, .08),
+    0 36px 68px rgba(21, 56, 97, .22);
 }
 
 .floating-chip {
@@ -2109,7 +2130,7 @@ h1 span {
 .scroll-cue {
   position: absolute;
   bottom: 16px;
-  left: 50%;
+  left: max(20px, calc(50% - var(--content) / 2));
   z-index: 7;
   display: flex;
   align-items: center;
@@ -2120,7 +2141,6 @@ h1 span {
   letter-spacing: .12em;
   text-decoration: none;
   text-transform: uppercase;
-  transform: translateX(-50%);
 }
 
 .scroll-cue i {
