@@ -2531,3 +2531,362 @@ h1 span {
     transform: rotate(2deg);
   }
 }
+
+/* Como se usa: tutoriales en video y guia escrita */
+
+.howto-section {
+  padding: 18px 0 8px;
+}
+
+.howto-block {
+  margin-top: 30px;
+  scroll-margin-top: 88px;
+}
+
+.howto-block-head {
+  max-width: 640px;
+  margin: 0 auto 22px;
+  text-align: center;
+}
+
+.howto-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  margin: 0 0 10px;
+  border-radius: 999px;
+  padding: 0 12px;
+  background: #eaf4ff;
+  color: var(--blue);
+  font-size: 11.5px;
+  font-weight: 850;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.howto-tag.alt {
+  background: #eeeaff;
+  color: var(--violet);
+}
+
+.howto-block-head h3 {
+  margin: 0 0 8px;
+  color: #071432;
+  font-size: clamp(22px, 2.2vw, 28px);
+  letter-spacing: -.028em;
+  line-height: 1.14;
+}
+
+.howto-block-head > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+
+.tutorials-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 310px) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 54px);
+  align-items: start;
+  margin-top: 34px;
+  border: 1px solid #cfe5ff;
+  border-radius: 30px;
+  padding: clamp(26px, 4vw, 46px);
+  background:
+    radial-gradient(circle at 100% 0, rgba(114, 87, 245, .14), transparent 42%),
+    linear-gradient(135deg, #f4faff, #fff 56%, #f4f1ff);
+}
+
+.tutorial-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(207, 229, 255, .9);
+  border-radius: 26px;
+  aspect-ratio: 9 / 16;
+  background: #0b1430;
+  box-shadow: var(--shadow-lg);
+}
+
+.tutorial-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.tutorial-cover {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.tutorial-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tutorial-cover-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 20, 50, 0) 26%,
+    rgba(7, 20, 50, .58) 56%,
+    rgba(7, 20, 50, .95)
+  );
+}
+
+.tutorial-cover-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 66px;
+  height: 66px;
+  translate: -50% -50%;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 16px 36px rgba(7, 20, 50, .34);
+  transition: transform .25s cubic-bezier(.2, .7, .2, 1);
+}
+
+.tutorial-cover-play svg {
+  width: 26px;
+  height: 26px;
+  margin-left: 3px;
+  fill: var(--blue);
+}
+
+.tutorial-cover:hover .tutorial-cover-play,
+.tutorial-cover:focus-visible .tutorial-cover-play {
+  transform: scale(1.08);
+}
+
+.tutorial-cover-copy {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+}
+
+.tutorial-cover-copy small {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .82;
+}
+
+.tutorial-cover-copy strong {
+  display: block;
+  font-size: 19px;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+}
+
+.tutorial-privacy {
+  margin: 14px 2px 0;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.tutorial-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.tutorial-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid rgba(207, 229, 255, .9);
+  border-radius: 18px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, .82);
+  box-shadow: 0 12px 30px rgba(20, 68, 122, .06);
+  text-decoration: none;
+  transition:
+    transform .25s cubic-bezier(.2, .7, .2, 1),
+    border-color .25s ease,
+    background .25s ease;
+}
+
+.tutorial-item:hover {
+  transform: translateX(4px);
+  border-color: #a9d2ff;
+  background: #fff;
+}
+
+.tutorial-item.is-active {
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow: 0 16px 34px rgba(8, 119, 249, .16);
+}
+
+.tutorial-index {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 14px;
+  background: #e7f3ff;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.tutorial-item.is-active .tutorial-index {
+  background: linear-gradient(135deg, #1485ff, #0567ee);
+  color: #fff;
+}
+
+.tutorial-copy strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 15px;
+  letter-spacing: -.01em;
+}
+
+.tutorial-copy small {
+  display: block;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+@media (max-width: 920px) {
+  .tutorials-layout {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .tutorial-stage {
+    width: min(100%, 300px);
+  }
+
+  .tutorial-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .tutorial-item {
+    grid-template-columns: 38px 1fr;
+    gap: 13px;
+    padding: 13px 15px;
+  }
+
+  .tutorial-index {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tutorial-item,
+  .tutorial-cover-play {
+    transition: none;
+  }
+
+  .tutorial-item:hover {
+    transform: none;
+  }
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dce8f6;
+  border-radius: 20px;
+  padding: 22px 22px 20px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition:
+    transform .25s cubic-bezier(.2, .7, .2, 1),
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-4px);
+  border-color: #a9d2ff;
+  box-shadow: 0 20px 44px rgba(20, 68, 122, .12);
+}
+
+.guide-card strong {
+  margin-bottom: 6px;
+  font-size: 16px;
+  letter-spacing: -.015em;
+}
+
+.guide-card small {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.guide-card > span {
+  margin-top: 16px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.guide-card > span::after {
+  content: " →";
+}
+
+.guide-cta {
+  display: flex;
+  width: fit-content;
+  margin: 22px auto 0;
+}
+
+@media (max-width: 920px) {
+  .guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .guide-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .guide-cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guide-card {
+    transition: none;
+  }
+
+  .guide-card:hover {
+    transform: none;
+  }
+}

@@ -113,3 +113,46 @@ document.querySelectorAll(".interactive-card").forEach((card) => {
     card.style.setProperty("--spot-y", `${event.clientY - rect.top}px`);
   });
 });
+
+const tutorials = document.querySelector("[data-tutorials]");
+
+if (tutorials) {
+  const frame = tutorials.querySelector("[data-tutorial-frame]");
+  const cover = tutorials.querySelector("[data-tutorial-cover]");
+  const items = Array.from(tutorials.querySelectorAll("[data-tutorial-item]"));
+  let current = items[0];
+
+  function describe(item) {
+    const position = items.indexOf(item) + 1;
+    return { position, total: items.length, title: item.dataset.title || "" };
+  }
+
+  function play(item) {
+    const videoId = item.dataset.video;
+    if (!frame || !videoId) return;
+    const { position, total, title: name } = describe(item);
+    const player = document.createElement("iframe");
+    player.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+    player.title = `Tutorial ${position} de ${total}: ${name}`;
+    player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    player.referrerPolicy = "strict-origin-when-cross-origin";
+    player.allowFullscreen = true;
+    frame.replaceChildren(player);
+    items.forEach((entry) => entry.classList.toggle("is-active", entry === item));
+    current = item;
+  }
+
+  items.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+      event.preventDefault();
+      play(item);
+    });
+  });
+
+  cover?.addEventListener("click", (event) => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+    event.preventDefault();
+    play(current);
+  });
+}

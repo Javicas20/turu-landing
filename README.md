@@ -4,7 +4,9 @@ Landing estatica para `www.turito.es`.
 
 ## Archivos principales
 
-- `index.html`: pagina principal con hero, producto, acceso, precios y enlaces de ayuda.
+- `index.html`: pagina principal con hero, producto, la seccion `Como se usa`, acceso, precios y enlaces de ayuda.
+  La seccion `Como se usa` (`#como-se-usa`) agrupa dos bloques: los tutoriales en video (`#tutoriales`) y los accesos a la guia escrita (`#guia`), que enlazan a los apartados de `guia.html`.
+- `assets/tutoriales/`: miniaturas propias de los ocho tutoriales. El reproductor de YouTube solo se carga al pulsar play, desde `youtube-nocookie.com`, para que la web no envie datos a terceros mientras nadie reproduce un video.
 - `privacy.html`: politica de privacidad inicial.
 - `cookies.html`: politica de cookies y almacenamiento tecnico.
 - `legal.html`: aviso legal inicial.
