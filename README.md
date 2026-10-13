@@ -12,7 +12,7 @@ Landing estatica para `www.turito.es`.
 - `legal.html`: aviso legal inicial.
 - `faq.html`: preguntas frecuentes.
 - `guia.html`: guia de producto y primeros pasos.
-- Los nuevos negocios crean su propia cuenta y disponen de una prueba gratuita de 30 días para un máximo de 10 trabajadores.
+- Los nuevos negocios crean su propia cuenta y disponen de una prueba gratuita de 30 días para un máximo de 30 trabajadores.
 - `PRIVACY_SECURITY_COMPLIANCE.md`: auditoria interna y plan previo al lanzamiento.
 - `robots.txt` y `sitemap.xml`: preparacion SEO basica.
 
@@ -36,7 +36,7 @@ Hasta completar esos pasos, `app.turito.es` puede redirigir a la landing o falla
 
 ## Flujo de prueba gratuita
 
-Los botones comerciales llevan al panel para que el interesado registre su propio negocio. La prueba se activa durante 30 días y admite un máximo de 10 trabajadores. Al finalizar, el negocio debe elegir un plan para continuar. La landing no cobra ni activa por sí misma ninguna suscripción.
+Los botones comerciales llevan al panel para que el interesado registre su propio negocio. La prueba se activa durante 30 días y admite un máximo de 30 trabajadores. Al finalizar, el negocio debe elegir un plan para continuar. La landing no cobra ni activa por sí misma ninguna suscripción.
 
 Las descargas de Android e iOS no se anuncian mientras las aplicaciones no estén publicadas en sus tiendas.
 
